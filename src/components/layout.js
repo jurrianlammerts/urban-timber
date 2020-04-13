@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
+import Logo from '../utils/logo';
 
 const Layout = props => {
   const { title, children } = props;
@@ -26,26 +27,27 @@ const Layout = props => {
           </a>
           <nav id="swup" class="site-head-left">
             <ul className="nav" role="menu">
-              <li className="nav-home nav-current" role="menuitem">
+              <li className="nav-home" role="menuitem">
                 <Link to={`/`}>Home</Link>
               </li>
+              <li className="nav-home" role="menuitem">
+                <Link to={`/`}>Projecten</Link>
+              </li>
               <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>About</Link>
+                <Link to={`/about`}>Over ons</Link>
               </li>
               <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
+                <Link to={`/elements`}>Styling</Link>
               </li>
             </ul>
           </nav>
           <div className="site-head-center">
-            <Link className="site-head-logo" to={`/`}>
-              {title}
-            </Link>
+            <Logo />
           </div>
           <div className="site-head-right">
             <div className="social-links">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/UrbanTimberNL/"
                 title="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -58,16 +60,8 @@ const Layout = props => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+                Instagram
               </a>
-              <Link
-                to={`/rss.xml`}
-                title="RSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSS
-              </Link>
             </div>
           </div>
         </div>
@@ -78,15 +72,7 @@ const Layout = props => {
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with{" "}
-        <a
-          href="https://gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gatsby
-        </a>
+        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link>
       </footer>
     </div>
   );

@@ -30,19 +30,21 @@ const Layout = props => {
               <li className="nav-home" role="menuitem">
                 <Link to={`/`}>Home</Link>
               </li>
-              <li className="nav-home" role="menuitem">
-                <Link to={`/`}>Projecten</Link>
-              </li>
               <li className="nav-about" role="menuitem">
                 <Link to={`/about`}>Over ons</Link>
               </li>
               <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Styling</Link>
+                <Link to={`/contact`}>Contact</Link>
               </li>
+              {/* <li className="nav-elements" role="menuitem">
+                <Link to={`/elements`}>Styling</Link>
+              </li> */}
             </ul>
           </nav>
           <div className="site-head-center">
-            <Logo />
+            <Link to={`/`}>
+              <Logo />
+            </Link>
           </div>
           <div className="site-head-right">
             <div className="social-links">
@@ -54,14 +56,14 @@ const Layout = props => {
               >
                 Facebook
               </a>
-              <a
+              {/* <a
                 href="https://twitter.com"
                 title="Twitter"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Instagram
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ const AboutPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title="Over ons" keywords={[`over ons`, `urban`, `timber`, `urbantimber`]} />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">

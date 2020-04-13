@@ -35,7 +35,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
-    "husky": "^2.2.0",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^8.0.10",
     "postcss-easy-import": "^3.0.0",
@@ -47,10 +46,5 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   }
 }

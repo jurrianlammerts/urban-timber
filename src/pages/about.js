@@ -19,19 +19,26 @@ const AboutPage = ({ data }, location) => {
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <h3 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Wij streven ernaar om bij elke klus de verwachtingen te overtreffen.
-            Met onze moderne faciliteiten profiteren we van de nieuwste
-            technologie terwijl we traditionele technieken gebruiken om ons vak
-            te slijpen.
-          </h3>
+          <p>
+            Wij staan voor maatwerk en gezelligheid. Wij maken meubels van alle
+            soorten materiaal in welke kleur dan ook, je kan het zo gek niet
+            bedenken. Uw smaak is uniek. En zo moet ook uw meubel zijn. Wij
+            bouwen met passie en nauwkeurigheid aan een meubel naar uw wens en
+            zijn pas tevreden wanneer u verliefd bent op het resultaat.
+          </p>
+
+          <br />
+          <h2 className="page-head-title">
+            Zoals we in Rotterdam zeggen: “Geen woorden maar daden”.
+          </h2>
+
           <figure className="kg-card kg-image-card kg-width-full">
             <Img
               fluid={data.woodTools.childImageSharp.fluid}
               className="kg-image"
             />
             <figcaption>
-              Grote foto's zullen overal de aandacht van klanten moeten trekken
+              Keuken van Jurrian Lammerts
             </figcaption>
           </figure>
 
@@ -72,7 +79,6 @@ const AboutPage = ({ data }, location) => {
                   <option value={1}>Anders</option>
                 </select>
               </div>
-
 
               {/* <div className="col-4 col-12-small">
                 <input
@@ -150,7 +156,7 @@ const indexQuery = graphql`
         title
       }
     }
-    woodTools: file(relativePath: { eq: "tools-1.jpg" }) {
+    woodTools: file(relativePath: { eq: "project-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid

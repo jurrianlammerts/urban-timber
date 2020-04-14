@@ -54,7 +54,7 @@ const ContactPage = ({ data }, location) => {
             multiple
             action="https://getform.io/f/a16e38f0-13be-476f-98bc-31338b7da179"
             method="POST"
-            encType="multipart/form-data"
+            enctype="multipart/form-data"
             // action="/success"
             // data-netlify="true"
             // data-netlify-honeypot="bot-field"

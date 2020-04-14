@@ -67,11 +67,12 @@ const ContactPage = ({ data }, location) => {
                   <h4>Heb je zelf een tof idee?</h4>
                   <p>Upload hier de foto van je idee!</p>
                 </div>
-                <label for="files" class="button">
-                  Select Image
+                <label for="file" class="button">
+                  Upload bestand
                 </label>
                 <input
-                  id="files"
+                  id="file"
+                  name="number"
                   style={{ visibility: 'hidden' }}
                   type="file"
                 />

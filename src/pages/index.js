@@ -1,13 +1,13 @@
-import React from "react";
-import { graphql, StaticQuery } from "gatsby";
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import PostCard from "../components/postCard";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import PostCard from '../components/postCard';
 
 // import "../utils/global.scss"
-import "../utils/normalize.css";
-import "../utils/css/screen.css";
+import '../utils/normalize.css';
+import '../utils/css/screen.css';
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -17,8 +17,8 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout title={siteTitle}>
       <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        title="Home"
+        keywords={[`urbantimber`, `jochem rutjes`, `rotterdam`, `wood`, 'hout']}
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (

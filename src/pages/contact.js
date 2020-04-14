@@ -36,6 +36,7 @@ const ContactPage = ({ data }, location) => {
           <form
             name="contact"
             method="post"
+            action="/success"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
@@ -55,13 +56,26 @@ const ContactPage = ({ data }, location) => {
               </div>
               <div className="col-6 col-12-xsmall">
                 <input
-                  type="number"
+                  type="text"
                   name="number"
                   id="number"
                   placeholder="Telefoon"
                 />
               </div>
-
+              <div className="col-12">
+                <div className="post-content-contact">
+                  <h4>Heb je zelf een tof idee?</h4>
+                  <p>Upload hier de foto van je idee!</p>
+                </div>
+                <label for="files" class="button">
+                  Select Image
+                </label>
+                <input
+                  id="files"
+                  style={{ visibility: 'hidden' }}
+                  type="file"
+                />
+              </div>
               <div className="col-12">
                 <textarea
                   name="message"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
@@ -9,6 +9,20 @@ import '../utils/css/screen.css';
 
 const ContactPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title;
+
+  const [fileInputValue, setFileInputValue] = useState(null);
+  const fileInput = useRef(null);
+
+  function handleFileChange() {
+    const path = fileInput.current.value;
+
+    let fileName = path.replace(/^.*\\/, '');
+
+    if (fileName.length > 25) fileName = fileName.substring(0, 25);
+
+    setFileInputValue(fileName);
+    console.log(fileName);
+  }
 
   return (
     <Layout title={siteTitle}>
@@ -35,9 +49,12 @@ const ContactPage = ({ data }, location) => {
           <h2 id="forms">Neem contact met ons op</h2>
           <form
             name="contact"
+            className="inputfile"
+            data-multiple-caption="{count} files selected"
+            multiple
             action="https://getform.io/f/a16e38f0-13be-476f-98bc-31338b7da179"
             method="POST"
-            enctype="multipart/form-data"
+            encType="multipart/form-data"
             // action="/success"
             // data-netlify="true"
             // data-netlify-honeypot="bot-field"
@@ -69,11 +86,13 @@ const ContactPage = ({ data }, location) => {
                   <h4>Heb je zelf een tof idee?</h4>
                   <p>Upload hier de foto van je idee!</p>
                 </div>
-                <label for="file" class="button">
-                  Upload bestand
+                <label htmlFor="file" className="button">
+                  {fileInputValue ? fileInputValue : 'Upload bestand'}
                 </label>
                 <input
                   id="file"
+                  ref={fileInput}
+                  onChange={handleFileChange}
                   name="file"
                   style={{ visibility: 'hidden' }}
                   type="file"

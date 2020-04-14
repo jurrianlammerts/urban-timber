@@ -19,11 +19,28 @@ const ContactPage = ({ data }, location) => {
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          {/* <p>Rotterdam</p>
-          <p>+31612345678</p> */}
+          <div className="post-content-contact">
+            <p>Paul Krugerstraat 89A</p>
+            <p>3082 GD Rotterdam</p>
+            <p>
+              tel: <a href="tel:+31636109646">+31636109646</a>
+            </p>
+            <p>
+              email:{' '}
+              <a href="mailto:info@urbantimber.nl">info@urbantimber.nl</a>
+            </p>
+            <p>kvk: NL224467669B01</p>
+          </div>
 
           <h2 id="forms">Neem contact met ons op</h2>
-          <form method="post" action="#">
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
             <div className="row gtr-uniform">
               <div className="col-6 col-12-xsmall">
                 <input

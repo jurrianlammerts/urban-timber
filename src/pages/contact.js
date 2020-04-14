@@ -18,10 +18,12 @@ const ContactPage = ({ data }, location) => {
 
     let fileName = path.replace(/^.*\\/, '');
 
-    if (fileName.length > 25) fileName = fileName.substring(0, 25);
+    if (fileName.length > 25) {
+      const extension = fileName.substr(fileName.lastIndexOf('.') + 1);
+      fileName = fileName.substring(0, 40).concat(`.${extension}`);
+    }
 
     setFileInputValue(fileName);
-    console.log(fileName);
   }
 
   return (

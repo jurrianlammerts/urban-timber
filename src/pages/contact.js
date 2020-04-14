@@ -60,7 +60,12 @@ const ContactPage = ({ data }, location) => {
           >
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
-            <input type="text" name="subject" value="Bericht van {{name}} via UrbanTimber" class="hidden">
+            <input
+              type="text"
+              name="subject"
+              value="Bericht van {{name}} via UrbanTimber"
+              class="hidden"
+            />
 
             <div className="row gtr-uniform">
               <div className="col-6 col-12-xsmall">

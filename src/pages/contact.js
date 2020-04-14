@@ -52,8 +52,7 @@ const ContactPage = ({ data }, location) => {
           <form
             name="contact"
             className="inputfile"
-            multiple
-            method="POST"
+            method="post"
             action="/success"
             data-netlify="true"
             data-netlify-honeypot="bot-field"

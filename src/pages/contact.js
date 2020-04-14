@@ -52,17 +52,16 @@ const ContactPage = ({ data }, location) => {
           <form
             name="contact"
             className="inputfile"
-            data-multiple-caption="{count} files selected"
             multiple
-            action="https://getform.io/f/a16e38f0-13be-476f-98bc-31338b7da179"
             method="POST"
-            enctype="multipart/form-data"
-            // action="/success"
-            // data-netlify="true"
-            // data-netlify-honeypot="bot-field"
+            action="/success"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
-            {/* <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="contact" /> */}
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="text" name="subject" value="Bericht van {{name}} via UrbanTimber" class="hidden">
+
             <div className="row gtr-uniform">
               <div className="col-6 col-12-xsmall">
                 <input type="text" name="name" id="name" placeholder="Naam" />

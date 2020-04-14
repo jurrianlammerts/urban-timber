@@ -35,13 +35,15 @@ const ContactPage = ({ data }, location) => {
           <h2 id="forms">Neem contact met ons op</h2>
           <form
             name="contact"
-            method="post"
-            action="/success"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            action="https://getform.io/f/a16e38f0-13be-476f-98bc-31338b7da179"
+            method="POST"
+            enctype="multipart/form-data"
+            // action="/success"
+            // data-netlify="true"
+            // data-netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="contact" />
+            {/* <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" /> */}
             <div className="row gtr-uniform">
               <div className="col-6 col-12-xsmall">
                 <input type="text" name="name" id="name" placeholder="Naam" />

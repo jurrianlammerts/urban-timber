@@ -43,34 +43,29 @@ const ContactPage = ({ data }, location) => {
             <input type="hidden" name="form-name" value="contact" />
             <div className="row gtr-uniform">
               <div className="col-6 col-12-xsmall">
-                <input
-                  type="text"
-                  name="demo-name"
-                  id="demo-name"
-                  placeholder="Naam"
-                />
+                <input type="text" name="name" id="name" placeholder="Naam" />
               </div>
               <div className="col-6 col-12-xsmall">
                 <input
                   type="email"
-                  name="demo-email"
-                  id="demo-email"
+                  name="email"
+                  id="email"
                   placeholder="Email"
                 />
               </div>
               <div className="col-6 col-12-xsmall">
                 <input
-                  type="email"
-                  name="demo-email"
-                  id="demo-email"
+                  type="number"
+                  name="number"
+                  id="number"
                   placeholder="Telefoon"
                 />
               </div>
 
               <div className="col-12">
                 <textarea
-                  name="demo-message"
-                  id="demo-message"
+                  name="message"
+                  id="message"
                   placeholder="Voer uw bericht in"
                   rows={6}
                   defaultValue={''}

@@ -69,7 +69,6 @@ const AboutPage = ({ data }, location) => {
                   placeholder="Telefoon"
                 />
               </div>
-              {/* Break */}
               <div className="col-6 col-12-xsmall">
                 <select name="demo-category" id="demo-category">
                   <option value>- Categorie -</option>
@@ -79,43 +78,6 @@ const AboutPage = ({ data }, location) => {
                   <option value={1}>Anders</option>
                 </select>
               </div>
-
-              {/* <div className="col-4 col-12-small">
-                <input
-                  type="radio"
-                  id="demo-priority-low"
-                  name="demo-priority"
-                  defaultChecked
-                />
-                <label htmlFor="demo-priority-low">Low</label>
-              </div>
-              <div className="col-4 col-12-small">
-                <input
-                  type="radio"
-                  id="demo-priority-normal"
-                  name="demo-priority"
-                />
-                <label htmlFor="demo-priority-normal">Normal</label>
-              </div>
-              <div className="col-4 col-12-small">
-                <input
-                  type="radio"
-                  id="demo-priority-high"
-                  name="demo-priority"
-                />
-                <label htmlFor="demo-priority-high">High</label>
-              </div> */}
-
-              {/* <div className="col-6 col-12-small">
-                <input
-                  type="checkbox"
-                  id="demo-human"
-                  name="demo-human"
-                  defaultChecked
-                />
-                <label htmlFor="demo-human">I am a human</label>
-              </div> */}
-              {/* Break */}
               <div className="col-12">
                 <textarea
                   name="demo-message"
@@ -131,7 +93,6 @@ const AboutPage = ({ data }, location) => {
                   <li>
                     <input
                       type="submit"
-                      // defaultValue="Send Message"
                       value="Stuur"
                       className="primary"
                     />

@@ -72,7 +72,7 @@ const ContactPage = ({ data }, location) => {
                 </label>
                 <input
                   id="file"
-                  name="number"
+                  name="file"
                   style={{ visibility: 'hidden' }}
                   type="file"
                 />

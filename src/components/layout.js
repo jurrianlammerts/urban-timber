@@ -56,14 +56,6 @@ const Layout = props => {
               >
                 Facebook
               </a>
-              {/* <a
-                href="https://twitter.com"
-                title="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a> */}
             </div>
           </div>
         </div>

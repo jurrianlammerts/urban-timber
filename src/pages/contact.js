@@ -1,17 +1,27 @@
 import React, { useRef, useState } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import ReactMapGL, { Marker } from 'react-map-gl';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Pin from '../components/pin';
 
 import '../utils/normalize.css';
 import '../utils/css/screen.css';
 
 const ContactPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title;
-
   const [fileInputValue, setFileInputValue] = useState(null);
   const fileInput = useRef(null);
+
+  const [viewport, setViewport] = useState({
+    latitude: 51.901145,
+    longitude: 4.500075,
+    width: '100%',
+    height: '400px',
+    zoom: 12
+  });
 
   function handleFileChange() {
     const path = fileInput.current.value;
@@ -22,7 +32,6 @@ const ContactPage = ({ data }, location) => {
       const extension = fileName.substr(fileName.lastIndexOf('.') + 1);
       fileName = fileName.substring(0, 40).concat(`.${extension}`);
     }
-
     setFileInputValue(fileName);
   }
 
@@ -36,16 +45,28 @@ const ContactPage = ({ data }, location) => {
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <div className="post-content-contact">
-            <p>Paul Krugerstraat 89A</p>
-            <p>3082 GD Rotterdam</p>
-            <p>
-              tel: <a href="tel:+31636109646">+31636109646</a>
-            </p>
-            <p>
-              email:{' '}
-              <a href="mailto:info@urbantimber.nl">info@urbantimber.nl</a>
-            </p>
-            <p>kvk: NL224467669B01</p>
+            <ReactMapGL
+              {...viewport}
+              mapStyle="mapbox://styles/mapbox/dark-v9"
+              mapboxApiAccessToken={process.env.GATSBY_API_TOKEN}
+            >
+              <Marker longitude={4.497748} latitude={51.904676}>
+                <Pin />
+              </Marker>
+            </ReactMapGL>
+
+            {/* <div className="col-6 ">
+                <p>Paul Krugerstraat 89A</p>
+                <p>3082 GD Rotterdam</p>
+                <p>
+                  tel: <a href="tel:+31636109646">+31636109646</a>
+                </p>
+                <p>
+                  email:{' '}
+                  <a href="mailto:info@urbantimber.nl">info@urbantimber.nl</a>
+                </p>
+                <p>kvk: NL224467669B01</p>
+              </div> */}
           </div>
 
           <h2 id="forms">Neem contact met ons op</h2>
@@ -62,8 +83,9 @@ const ContactPage = ({ data }, location) => {
             <input
               type="text"
               name="subject"
-              value="Bericht van {{name}} via UrbanTimber"
-              class="hidden"
+              value="Bericht van {{email}} via UrbanTimber"
+              className="hidden"
+              readOnly
             />
 
             <div className="row gtr-uniform">
@@ -136,6 +158,13 @@ const indexQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    mapMarker: file(relativePath: { eq: "map-marker.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 450) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

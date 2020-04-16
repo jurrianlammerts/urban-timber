@@ -45,19 +45,9 @@ const ContactPage = ({ data }, location) => {
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <div className="post-content-contact">
-            <ReactMapGL
-              {...viewport}
-              mapStyle="mapbox://styles/mapbox/dark-v9"
-              mapboxApiAccessToken={process.env.GATSBY_API_TOKEN}
-            >
-              <Marker longitude={4.497748} latitude={51.904676}>
-                <Pin />
-              </Marker>
-            </ReactMapGL>
-
-            {/* <div className="col-6 ">
-                <p>Paul Krugerstraat 89A</p>
-                <p>3082 GD Rotterdam</p>
+            <div className="row">
+              <div className="col-6">
+                <h5>Contact</h5>
                 <p>
                   tel: <a href="tel:+31636109646">+31636109646</a>
                 </p>
@@ -66,10 +56,28 @@ const ContactPage = ({ data }, location) => {
                   <a href="mailto:info@urbantimber.nl">info@urbantimber.nl</a>
                 </p>
                 <p>kvk: NL224467669B01</p>
-              </div> */}
+              </div>
+              <div className="col-6">
+                <h5>Adress</h5>
+                <p>Paul Krugerstraat 89A</p>
+                <p>3082 GD Rotterdam</p>
+              </div>
+            </div>
           </div>
 
-          <h2 id="forms">Neem contact met ons op</h2>
+          <ReactMapGL
+            {...viewport}
+            mapStyle="mapbox://styles/mapbox/dark-v9"
+            mapboxApiAccessToken={process.env.GATSBY_API_TOKEN}
+          >
+            <Marker longitude={4.497748} latitude={51.904676}>
+              <a href="https://goo.gl/maps/HQjnMVbTD8zey9Tu8">
+                <Pin />
+              </a>
+            </Marker>
+          </ReactMapGL>
+
+          <h2 id="forms">Of neem contact met ons op</h2>
           <form
             name="contact"
             className="inputfile"

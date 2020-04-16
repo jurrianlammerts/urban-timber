@@ -91,7 +91,7 @@ const ContactPage = ({ data }, location) => {
             <input
               type="text"
               name="subject"
-              value="Bericht van {{email}} via UrbanTimber"
+              value="Bericht via UrbanTimber"
               className="hidden"
               readOnly
             />

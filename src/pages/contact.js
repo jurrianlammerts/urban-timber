@@ -58,7 +58,7 @@ const ContactPage = ({ data }, location) => {
                 <p>kvk: NL224467669B01</p>
               </div>
               <div className="col-6">
-                <h5>Adress</h5>
+                <h5>Adres</h5>
                 <p>Paul Krugerstraat 89A</p>
                 <p>3082 GD Rotterdam</p>
               </div>

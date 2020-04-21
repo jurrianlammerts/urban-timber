@@ -15,11 +15,11 @@ const ContactPage = ({ data }, location) => {
   const fileInput = useRef(null);
 
   const [viewport, setViewport] = useState({
-    latitude: 51.901145,
-    longitude: 4.500075,
+    latitude: 51.87392,
+    longitude: 4.533994,
     width: '100%',
     height: '400px',
-    zoom: 12
+    zoom: 13,
   });
 
   function handleFileChange() {
@@ -68,9 +68,10 @@ const ContactPage = ({ data }, location) => {
             {...viewport}
             mapStyle="mapbox://styles/mapbox/dark-v9"
             mapboxApiAccessToken={process.env.GATSBY_API_TOKEN}
+            onViewportChange={(viewport) => setViewport(viewport)}
           >
-            <Marker longitude={4.497748} latitude={51.904676}>
-              <a href="https://goo.gl/maps/HQjnMVbTD8zey9Tu8">
+            <Marker longitude={4.533994} latitude={51.87392}>
+              <a href="https://goo.gl/maps/gwM15sQ3W98mXG3V9">
                 <Pin />
               </a>
             </Marker>
@@ -177,10 +178,10 @@ const indexQuery = graphql`
   }
 `;
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={indexQuery}
-    render={data => (
+    render={(data) => (
       <ContactPage location={props.location} data={data} {...props} />
     )}
   />

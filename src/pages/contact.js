@@ -66,6 +66,7 @@ const ContactPage = ({ data }, location) => {
 
           <ReactMapGL
             {...viewport}
+            width="100%"
             mapStyle="mapbox://styles/mapbox/dark-v9"
             mapboxApiAccessToken={process.env.GATSBY_API_TOKEN}
             onViewportChange={(viewport) => setViewport(viewport)}

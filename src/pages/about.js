@@ -15,7 +15,10 @@ const AboutPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="Over ons" keywords={[`over ons`, `urban`, `timber`, `urbantimber`]} />
+      <SEO
+        title="Over ons"
+        keywords={[`over ons`, `urban`, `timber`, `urbantimber`]}
+      />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
@@ -37,13 +40,13 @@ const AboutPage = ({ data }, location) => {
               fluid={data.woodTools.childImageSharp.fluid}
               className="kg-image"
             />
-            <figcaption>
-              Keuken van Jurrian Lammerts
-            </figcaption>
+            {/* <figcaption>
+              Keuken 
+            </figcaption> */}
           </figure>
 
-          <h2 id="forms">Vraag een offerte aan</h2>
-          <form method="post" action="#">
+          {/* <h2 id="forms">Vraag een offerte aan</h2> */}
+          {/* <form method="post" action="#">
             <div className="row gtr-uniform">
               <div className="col-6 col-12-xsmall">
                 <input
@@ -87,7 +90,7 @@ const AboutPage = ({ data }, location) => {
                   defaultValue={''}
                 />
               </div>
-              {/* Break */}
+
               <div className="col-12">
                 <ul className="actions">
                   <li>
@@ -104,6 +107,7 @@ const AboutPage = ({ data }, location) => {
               </div>
             </div>
           </form>
+ */}
         </div>
       </article>
     </Layout>
@@ -127,10 +131,10 @@ const indexQuery = graphql`
   }
 `;
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={indexQuery}
-    render={data => (
+    render={(data) => (
       <AboutPage location={props.location} data={data} {...props} />
     )}
   />

@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
 import ReactMapGL, { Marker } from 'react-map-gl';
 
 import Layout from '../components/layout';
@@ -59,8 +58,8 @@ const ContactPage = ({ data }, location) => {
               </div>
               <div className="col-6">
                 <h5>Adres</h5>
-                <p>Paul Krugerstraat 89A</p>
-                <p>3082 GD Rotterdam</p>
+                <p>Alblasserdamstraat 10-049</p>
+                <p>3076 JZ Rotterdam</p>
               </div>
             </div>
           </div>

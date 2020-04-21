@@ -15,7 +15,7 @@ class SuccessPage extends React.Component {
         <article className="post-content page-template no-image">
           <h2>Uw bericht is verstuurd</h2>
           <p>Iemand zal zo spoedig mogelijk contact met u opnemen.</p>
-          <a href="/" className="button primary">
+          <a href="/" className="button">
             Terug
           </a>
         </article>

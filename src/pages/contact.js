@@ -78,7 +78,7 @@ const ContactPage = ({ data }, location) => {
             </Marker>
           </ReactMapGL>
 
-          <h2 id="forms">Of neem contact met ons op</h2>
+          <h2 id="forms">Of stuur ons een bericht</h2>
           <form
             name="contact"
             className="inputfile"

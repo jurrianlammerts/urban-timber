@@ -70,6 +70,8 @@ const ContactPage = ({ data }, location) => {
             mapStyle="mapbox://styles/mapbox/dark-v9"
             mapboxApiAccessToken={process.env.GATSBY_API_TOKEN}
             onViewportChange={(viewport) => setViewport(viewport)}
+            maxZoom={13}
+            minZoom={13}
           >
             <Marker longitude={4.533994} latitude={51.87392}>
               <a href="https://goo.gl/maps/gwM15sQ3W98mXG3V9">
@@ -77,7 +79,7 @@ const ContactPage = ({ data }, location) => {
               </a>
             </Marker>
           </ReactMapGL>
-
+{/* 
           <h2 id="forms">Of stuur ons een bericht</h2>
           <form
             name="contact"
@@ -155,7 +157,7 @@ const ContactPage = ({ data }, location) => {
                 </ul>
               </div>
             </div>
-          </form>
+          </form> */}
         </div>
       </article>
     </Layout>
